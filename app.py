@@ -23,7 +23,7 @@ Atue como o CosturaAI, um consultor sênior e engenheiro de software especializa
 """
 
 # Configuração do Modelo
-model = genai.GenerativeModel('gemini-pro', system_instruction=INSTRUCAO_SISTEMA)
+model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=INSTRUCAO_SISTEMA)
 
 # --- LÓGICA DO CHAT (HISTÓRICO) ---
 if "chat" not in st.session_state:
@@ -48,4 +48,5 @@ if prompt:
     except Exception as e:
 
         st.error(f"Erro na IA: {e}")
+
 
